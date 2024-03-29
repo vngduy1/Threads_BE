@@ -12,8 +12,8 @@ const getUserProfile = async (req, res) => {
 
     res.status(200).json(user);
   } catch (error) {
-    res.status(500).json({ error: err.message });
-    console.log("Error in getUserProfile: ", err.message);
+    res.status(500).json({ error: error.message });
+    console.log("Error in getUserProfile: ", error.message);
   }
 };
 
@@ -153,8 +153,8 @@ const updateUser = async (req, res) => {
 
     res.status(200).json({ message: "Profile updated successfully", user });
   } catch (error) {
-    res.status(500).json({ error: err.message });
-    console.log("Error in updateUser: ", err.message);
+    res.status(500).json({ error: error.message });
+    console.log("Error in updateUser: ", error.message);
   }
 };
 
